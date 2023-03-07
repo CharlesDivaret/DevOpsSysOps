@@ -3,7 +3,7 @@ from django.test import TestCase
 #test unitaire
 class YourTestClass(TestCase):
     def setUp(self):
-        # Setup run before every test method.
+        # Setup run before every test method
         pass
 
     def tearDown(self):
