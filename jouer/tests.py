@@ -7,7 +7,7 @@ class YourTestClass(TestCase):
         pass
 
     def tearDown(self):
-        # Clean up run after every test method
+        # Clean up run after every test method.
         pass
 
     def test_something_that_will_pass(self):
