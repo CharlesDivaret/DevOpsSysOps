@@ -5,7 +5,10 @@
     <title>Home</title>
 </head>
 <body>
+<div>
+
 <h1>Pendu</h1>
+      {% if vie > 0 %}
 <h3 >Mot a deviner</h3>
 <label >{{ motHidden}}</label><br>
 <label for="vie">{{ vie }} vies</label>
@@ -14,6 +17,8 @@
     <input type="text" name="letter" placeholder="Devinez une lettre" maxlength="1" required>
     <button type="submit">Valider</button>
 </form>
+        {% endif %}
+</div>
 
 <a href="{% url 'home' %}" class="">Rejouer</a>
 

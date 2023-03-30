@@ -54,4 +54,9 @@ def devine(request):
         if letter not in mot:
             vie-=1
         request.session['vie'] = vie
-        return render(request, 'jouer/devine.html',{'mot': mot, 'motHidden': motHidden, 'vie':vie})
+
+        if vie == 0:
+
+            return render(request, 'jouer/devine.html',{'mot': mot, 'motHidden': motHidden, 'vie':0})
+
+        return render(request, 'jouer/devine.html', {'mot': mot, 'motHidden': motHidden, 'vie': vie})
