@@ -1,5 +1,5 @@
 from django.test import TestCase
-from views import getMot
+from . import views
 #test unitaire
 class YourTestClass(TestCase):
     def setUp(self):
@@ -11,5 +11,5 @@ class YourTestClass(TestCase):
         pass
 
     def test_getMot_function(self):
-        mot = getMot()
+        mot = views.getMot()
         self.assertFalse(len(mot) == 0)
