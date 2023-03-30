@@ -1,5 +1,5 @@
 from django.test import TestCase
-
+from views import getMot
 #test unitaire
 class YourTestClass(TestCase):
     def setUp(self):
@@ -10,8 +10,6 @@ class YourTestClass(TestCase):
         # Clean up run after every test method
         pass
 
-    def test_something_that_will_pass(self):
-        self.assertFalse(False)
-
-    def test_something_that_will_fail(self):
-        self.assertTrue(True)
+    def test_getMot_function(self):
+        mot = getMot()
+        self.assertFalse(len(mot) == 0)

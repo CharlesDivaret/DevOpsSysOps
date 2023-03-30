@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 
-def index(request):
+def getMot():
     import random
 
     # Liste de mots
@@ -23,9 +23,13 @@ def index(request):
             'lait', 'eau', 'vin', 'bière', 'café', 'thé', 'chocolat', 'bonbon', 'gâteau', 'crème glacée', 'pizza',
             'hamburger', 'frites', 'salade', 'soupe', 'riz', 'nouilles', 'pâtes', 'pain', 'beurre', 'huile', 'sel',
             'poivre', 'sucre']
+    
+    return '' + join(random.sample(mots, 1))
 
+def index(request):
+    
     # Liste aléatoire de 100 mots
-    mot = '' + join(random.sample(mots, 1))
+    mot = getMot()
     motHidden = ""
     for i in range(len(mot)):
         motHidden += "*"
