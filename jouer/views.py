@@ -24,7 +24,7 @@ def getMot():
             'hamburger', 'frites', 'salade', 'soupe', 'riz', 'nouilles', 'pâtes', 'pain', 'beurre', 'huile', 'sel',
             'poivre', 'sucre']
     
-    return '' + join(random.sample(mots, 1))
+    return mots[random.randint(0, len(mots)-1)]
 
 def index(request):
     

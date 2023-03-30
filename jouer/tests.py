@@ -12,4 +12,6 @@ class YourTestClass(TestCase):
 
     def test_getMot_function(self):
         mot = views.getMot()
+        print(len(mot))
+        print("test" + mot + "test")
         self.assertFalse(len(mot) == 0)
